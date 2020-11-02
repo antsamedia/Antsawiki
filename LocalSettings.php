@@ -325,8 +325,6 @@ wfLoadExtension( 'RevisionSlider' );
 wfLoadExtension( 'TemplateSandbox' );
 wfLoadExtension( 'LandingCheck' );
 wfLoadExtension( 'ORES' );
-// URL of the service
-$wgOresBaseUrl = 'https://ores.wikimedia.org/';
 // Either to exclude edits made by bot to score
 $wgOresExcludeBots = true;
 // Models to score
@@ -334,7 +332,7 @@ $wgOresModels = [
     'damaging' => [ 'enabled' => true ],
     'goodfaith' => [ 'enabled' => true ],
     'reverted' => [ 'enabled' => true ],
-    'wp10' => [ 'enabled' => true ],
+    'wp10' => [ 'enabled' => false ],
 ];
 // Thresholds of different sensitivies in ORES
 $wgOresDamagingThresholds = [ 'soft' => 0.7, 'hard' => 0.5 ];
@@ -344,7 +342,6 @@ $wgOresDamagingThresholds = [ 'soft' => 0.7, 'hard' => 0.5 ];
 $wgOresEnabledNamespaces = [];
 // Database id for ORES service. If not determined, it'll use database name.
 // You can choose 'testwiki' that ORES service sends last two digits of rev_id flipped.
-// For example: https://ores.wikimedia.org/v1/scores/testwiki/damaging/12345
 $wgOresWikiId = null;
 
 
