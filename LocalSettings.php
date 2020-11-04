@@ -323,6 +323,15 @@ $wgEchoNewMsgAlert = true;
 wfLoadExtension( 'SandboxLink' );
 wfLoadExtension( 'RevisionSlider' );
 wfLoadExtension( 'TemplateSandbox' );
+wfLoadExtension( 'MaintenanceShell' );
+// Grant access to Special:MaintenanceShell to the "developer" user group:
+$wgGroupPermissions['developer']['maintenanceshell'] = true;
+
+# Or
+
+// Create a new "maintenanceshell" user group for Special:MaintenanceShell:
+$wgGroupPermissions['maintenanceshell']['maintenanceshell'] = true;
+
 wfLoadExtension( 'LandingCheck' );
 wfLoadExtension( 'ORES' );
 // Either to exclude edits made by bot to score
@@ -341,14 +350,14 @@ $wgOresDamagingThresholds = [ 'soft' => 0.7, 'hard' => 0.5 ];
 // Determine namespaces like [ 0 => true, 120 => true ].
 $wgOresEnabledNamespaces = [];
 // Database id for ORES service. If not determined, it'll use database name.
-// You can choose 'testwiki' that ORES service sends last two digits of rev_id flipped.
+// You can choose 'testwiki' that ORES service sends last digits of rev_id flipped.
 $wgOresWikiId = null;
 
 
 wfLoadExtension( 'AutoCreateCategoryPages');
 wfLoadExtension( 'BetaFeatures');
-
-
+wfLoadExtension( 'CodeReview' );
+wfLoadExtension( 'TwoColConflict' );
 wfLoadExtension( 'UniversalLanguageSelector' );
 $wgUniversalLanguageSelectorBetaFeature = true;
 
