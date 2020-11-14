@@ -304,6 +304,8 @@ $wgGroupPermissions['sysop']['review'] = true; //allow administrators to review 
 wfLoadExtension( 'TemplateWizard' );
 
 wfLoadExtension( 'Babel');
+wfLoadExtension( 'LoginNotify' );
+
 
 
 
